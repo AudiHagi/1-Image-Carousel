@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  display: legacy;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+
+img {
+  width: 600px;
+  height: 500px;
+  object-fit: fill;
+}
+
+.panel h3 {
+  font-size: 24px;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  margin: 0;
+  opacity: 0;
+}
+
+.title {
+  text-align: center;
+  margin: 1em 0 0.5em 0;
+	color: #343434;
+	font-weight: normal;
+	font-family: 'Ultra', sans-serif;   
+	font-size: 36px;
+	line-height: 42px;
+	text-transform: uppercase;
+	text-shadow: 0 2px white, 0 3px #777;
+}
+
+.carousel {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0);
+  height: 600px;
+  width: 500px;
+  overflow: hidden;
+}
+
+.image-container {
+  display: flex;
+  transform: translateX(0);
+  transition: transform 0.5s ease-in-out;
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: between;
+}
+
+.btn {
+  /*warna background button*/
+  background-color: #FCFCFD;
+  /*kelengkungan sudut*/
+  border-radius: 5px;
+  /*ketebalan pinggiran tombol*/
+  border-width: 0;
+  /*warna bayangan tombol*/
+  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,rgba(45, 35, 66, 0.3) 0 7px 13px -3px,#D6D6E7 0 -3px 0 inset;
+  /*warna tulisan tombol*/
+  color: #36395A;
+  /*setting jenis pointer*/
+  cursor: pointer;
+  /*setting font tulisan pada tombol*/
+  font-family: "JetBrains Mono",monospace;
+  /*ukuran tinggi tombol*/
+  height: 48px;
+  padding-left: 20px;
+  padding-right: 20px;
+  /*setting animasi pada tombol*/
+  transition: box-shadow .15s,transform .15s;
+  /*warna background button*/
+  will-change: box-shadow,transform;
+  /*setting besar font tulisan tombol*/
+  font-size: 18px;
+  /*setting jarak kiri kanan atas bawah*/
+  margin: auto;
+  margin-bottom: 10px;
+}
+
+.btn:focus {
+  box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+}
+
+.btn:hover {
+  box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+.btn:active {
+  box-shadow: #D6D6E7 0 3px 7px inset;
+  transform: translateY(2px);
+}
